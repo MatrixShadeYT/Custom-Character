@@ -5,11 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Custom Character - MSYT</title>
         <link rel="stylesheet" href="./style.css">
+        <script>
+            const dict = {
+                Main: {
+                    Basics: {
+                        Gender: ['select','feminine','masculine'],
+                        Age: ['number',0,100]
+                    },
+                    Personality: "Directory",
+                    Clothes: "Directory",
+                    Body: "Directory"
+                },
+                Personality: {Main: "Directory"},
+                Clothes: {Main: "Directory"},
+                Body: {Main: "Directory"},
+            }
+            const vals = {
+                Basics: {
+                    Gender: 'null',
+                    Age: 0
+                },
+                Clothes: {},
+                Body: {}
+            }
+        </script>
         <script src="./main.js"></script>
     </head>
     <body>
         <div id="navigator">
             <button onclick="navigation(this)">Basics</button>
+            <button onclick="navigation(this)">Personality</button>
             <button onclick="navigation(this)">Clothes</button>
             <button onclick="navigation(this)">Body</button>
         </div>
