@@ -33,14 +33,13 @@ const dict = {
         Main: 'Directory',
         Hair: {},
         Face: 'Directory',
-        Torso: 'Directory',
+        Torso: {},
         Arms: {},
         Legs: {},
         Hands: {},
         Feet: {}
     },
-    Face: {Body: 'Directory'},
-    Torso: {Body: 'Directory'}
+    Face: {Body: 'Directory'}
 }
 const vals = {
     Basics: {
