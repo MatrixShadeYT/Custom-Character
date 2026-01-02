@@ -5,7 +5,11 @@ function proplist() {
         stringy += `<br><label for="${Object.keys(dict[dir][tag])[i]}">${Object.keys(dict[dir][tag])[i]}: </label>`;
         if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'select') {
             stringy += `<select onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}">`;
-            stringy += `<option value="null" selected disabled>None</option>`;
+            if (vals[tag][Object.keys(vals[tag])[i]] == 'null') {
+                stringy += `<option value="null" selected disabled>None</option>`;
+            } else {
+                stringy += `<option value="null" disabled>None</option>`;
+            }
             for (let x = 0; x < dict[dir][tag][Object.keys(dict[dir][tag])[i]].length-1; x++) {
                 stringy += `<option value="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][x+1]}">${dict[dir][tag][Object.keys(dict[dir][tag])[i]][x+1]}</option>`;
             }
