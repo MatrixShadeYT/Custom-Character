@@ -36,9 +36,12 @@ const dict = {
 }
 const vals = {
     Basics: {
-        Gender: 'null',
-        Age: 0
+        Selector: 'null',
+        Number: 0,
+        Slider: 0,
+        Color: "#000000"
     },
+    Personality: {},
     Clothes: {},
     Body: {}
 }
