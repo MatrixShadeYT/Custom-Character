@@ -12,6 +12,8 @@ function proplist() {
             stringy += `</select>`;
         } else if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'number') {
             stringy += `<input onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="number" value="${vals[tag][i]}" min="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][1]}" max="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][2]}">`;
+        } else if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'range') {
+            stringy += `<input onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="range" value="${vals[tag][i]}" min="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][1]}" max="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][2]}">`;
         }
     }
     return stringy;
