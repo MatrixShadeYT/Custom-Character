@@ -1,17 +1,22 @@
 const dict = {
     Main: {
-        Basics: {
-            Selector: [
-                'select',
-                'feminine',
-                'masculine'
-            ],
-            Number: [
-                'number',
+        Square: {
+            startX: [
+                'range',
                 0,
                 100
             ],
-            Slider: [
+            startY: [
+                'range',
+                0,
+                100
+            ],
+            endX: [
+                'range',
+                0,
+                100
+            ],
+            endY: [
                 'range',
                 0,
                 100
@@ -20,24 +25,52 @@ const dict = {
                 'color'
             ]
         },
-        Clothes: "Directory",
-        Body: "Directory"
-    },
-    Clothes: {
-        Main: "Directory"
-    },
-    Body: {
-        Main: "Directory"
-    },
+        Trapezoid: {
+            startX: [
+                'range',
+                0,
+                100
+            ],
+            startY: [
+                'range',
+                0,
+                100
+            ],
+            endX: [
+                'range',
+                0,
+                100
+            ],
+            endY: [
+                'range',
+                0,
+                100
+            ],
+            Color: [
+                'color'
+            ],
+            Scale: [
+                'range',
+                0,
+                100
+            ]
+        }
+    }
 }
 const vals = {
-    Basics: {
-        Selector: 'null',
-        Number: 0,
-        Slider: 0,
+    Square: {
+        startX: 0,
+        startY: 0,
+        endX: 0,
+        endY: 0,
         Color: "#000000"
     },
-    Personality: {},
-    Clothes: {},
-    Body: {}
+    Trapezoid: {
+        startX: 30,
+        startY: 30,
+        endX: 50,
+        endY: 40,
+        Color: "#000000",
+        Scale: 0
+    }
 }
