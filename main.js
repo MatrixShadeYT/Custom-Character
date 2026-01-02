@@ -1,26 +1,17 @@
 var dir = "Main";
 function proplist() {
-    var stringy = '';
+    var stringy = ``;
     for (let i = 0; i < Object.keys(dict[dir][tag]).length; i++) {
-        stringy += '<br><label for="'+Object.keys(dict[dir][tag])[i]+'">'+Object.keys(dict[dir][tag])[i]+': </label>';
+        stringy += `<br><label for="${Object.keys(dict[dir][tag])[i]}">${Object.keys(dict[dir][tag])[i]}: </label>`;
         if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'select') {
-            stringy += '<select onchange="updVar(this)" id="'+
-            Object.keys(dict[dir][tag])[i]+'" name="'+
-            Object.keys(dict[dir][tag])[i]+'">';
-            stringy += '<option value="null" selected disabled>None</option>';
+            stringy += `<select onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}">`;
+            stringy += `<option value="null" selected disabled>None</option>`;
             for (let x = 0; x < dict[dir][tag][Object.keys(dict[dir][tag])[i]].length-1; x++) {
-                stringy += '<option value="'+
-                dict[dir][tag][Object.keys(dict[dir][tag])[i]][x+1]+'">'+
-                dict[dir][tag][Object.keys(dict[dir][tag])[i]][x+1]+'</option>';
+                stringy += `<option value="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][x+1]}">${dict[dir][tag][Object.keys(dict[dir][tag])[i]][x+1]}</option>`;
             }
-            stringy += '</select>';
+            stringy += `</select>`;
         } else if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'number') {
-            stringy += '<input onchange="updVar(this)" id="'+
-            Object.keys(dict[dir][tag])[i]+'" name="'+
-            Object.keys(dict[dir][tag])[i]+'" type="number" value="'+
-            vals[tag][i]+'" min="'+
-            dict[dir][tag][Object.keys(dict[dir][tag])[i]][1]+'" max="'+
-            dict[dir][tag][Object.keys(dict[dir][tag])[i]][2]+'">';
+            stringy += `<input onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="number" value="${vals[tag][i]}" min="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][1]}" max="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][2]}">`;
         }
     }
     return stringy;
@@ -32,24 +23,24 @@ function navlist() {
     }
 }
 function updVar(obj) {
-    console.log(obj.id+' = '+obj.value);
+    console.log(`${obj.id} = ${obj.value}`);
     vals[tag][obj.id] = obj.value;
 }
 function navigation(obj) {
-    var prop = document.getElementsByTagName('form')[0];
-    var navi = document.getElementsByTagName('div')[0];
+    var prop = document.getElementsByTagName(`form`)[0];
+    var navi = document.getElementsByTagName(`div`)[0];
     if (obj.innerHTML in dict[dir]) {
-        if (dict[dir][obj.innerHTML] == "Directory") {
+        if (dict[dir][obj.innerHTML] == `Directory`) {
             dir = obj.innerHTML;
             tag = obj.innerHTML;
-            navi.innerHTML = '';
-            prop.innerHTML = '';
+            navi.innerHTML = ``;
+            prop.innerHTML = ``;
             navlist();
         } else {
             tag = obj.innerHTML;
             prop.innerHTML = proplist();
         }
     } else {
-        console.error("It failed.")
+        console.error(`It failed.`);
     }
 }
