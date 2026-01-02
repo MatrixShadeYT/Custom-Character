@@ -1,15 +1,23 @@
 const dict = {
     Main: {
         Basics: {
-            Gender: [
+            Selector: [
                 'select',
                 'feminine',
                 'masculine'
             ],
-            Age: [
+            Number: [
                 'number',
                 0,
                 100
+            ],
+            Slider: [
+                'range',
+                1,
+                3
+            ],
+            Color: [
+                'color'
             ]
         },
         Personality: "Directory",
