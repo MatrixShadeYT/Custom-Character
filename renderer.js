@@ -6,27 +6,35 @@ function animate() {
     ctx.fillRect(0,0,canvas.width,canvas.height);
     // Square
     ctx.beginPath();
-    ctx.moveTo(vals['Square']['startX']/100*canvas.width,vals['Square']['startY']/100*canvas.height);
-    ctx.lineTo(vals['Square']['endX']/100*canvas.width,vals['Square']['startY']/100*canvas.height);
-    ctx.lineTo(vals['Square']['endX']/100*canvas.width,vals['Square']['endY']/100*canvas.height);
-    ctx.lineTo(vals['Square']['startX']/100*canvas.width,vals['Square']['endY']/100*canvas.height);
-    ctx.lineTo(vals['Square']['startX']/100*canvas.width,vals['Square']['startY']/100*canvas.height);
+    ctx.moveTo(37/100*canvas.width,0.14*canvas.height);
+    ctx.lineTo(0.49*canvas.width,0.14*canvas.height);
+    ctx.lineTo(0.49*canvas.width,0.28*canvas.height);
+    ctx.lineTo(0.37*canvas.width,0.28*canvas.height);
+    ctx.lineTo(0.37*canvas.width,0.14*canvas.height);
     ctx.closePath();
-    ctx.fillStyle = vals['Square']['Color'];
+    ctx.fillStyle = '#ffe7b3';
     ctx.fill();
     ctx.stroke();
-    // Trapezoid
-    /*
-    bottom left corner startX  (startX+scale,endY)
-    top left corner startY     (startX,startY)
-    */
+    // Trape
     ctx.beginPath();
-    ctx.moveTo(vals['Trapezoid']['startX']/100*canvas.width,vals['Trapezoid']['startY']/100*canvas.height);
-    ctx.lineTo(vals['Trapezoid']['endX']/100*canvas.width,vals['Trapezoid']['startY']/100*canvas.height);
-    ctx.lineTo(vals['Trapezoid']['endX']/100*canvas.width,vals['Trapezoid']['endY']/100*canvas.height);
-    ctx.lineTo(vals['Trapezoid']['startX']/100*canvas.width,vals['Trapezoid']['endY']/100*canvas.height);
+    ctx.moveTo((0.3*canvas.width),(0.33*canvas.height));
+    ctx.lineTo((0.57*canvas.width),(0.33*canvas.height));
+    ctx.lineTo((0.57*canvas.width)-(0.05*canvas.width),(0.52*canvas.height));
+    ctx.lineTo((0.3*canvas.width)+(0.05*canvas.width),(0.52*canvas.height));
+    ctx.lineTo((0.3*canvas.width),(0.33*canvas.height));
     ctx.closePath();
-    ctx.fillStyle = vals['Trapezoid']['Color'];
+    ctx.fillStyle = '#ffffff';
+    ctx.fill();
+    ctx.stroke();
+    // zoid
+    ctx.beginPath();
+    ctx.moveTo((0.31*canvas.width),(0.62*canvas.height));
+    ctx.lineTo((0.56*canvas.width),(0.62*canvas.height));
+    ctx.lineTo((0.56*canvas.width)-(0.04*canvas.width),(0.52*canvas.height));
+    ctx.lineTo((0.31*canvas.width)+(0.04*canvas.width),(0.52*canvas.height));
+    ctx.lineTo((0.31*canvas.width),(0.62*canvas.height));
+    ctx.closePath();
+    ctx.fillStyle = '#ad0000';
     ctx.fill();
     ctx.stroke();
 }
