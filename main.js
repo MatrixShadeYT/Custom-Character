@@ -21,7 +21,7 @@ function proplist() {
     return stringy;
 }
 function navlist() {
-    var navi = document.getElementsByTagName('div')[0];
+    var navi = document.querySelector(`#navigator`);
     for (let i = 0; i < Object.keys(dict[dir]).length; i++) {
         navi.innerHTML += `<button onclick="navigation(this)">${Object.keys(dict[dir])[i]}</button>`;
     }
@@ -31,8 +31,8 @@ function updVar(obj) {
     vals[tag][obj.id] = obj.value;
 }
 function navigation(obj) {
-    var prop = document.getElementsByTagName(`form`)[0];
-    var navi = document.getElementsByTagName(`div`)[0];
+    var prop = document.querySelector(`#properties`);
+    var navi = document.querySelector(`#navigator`);
     if (obj.innerHTML in dict[dir]) {
         if (dict[dir][obj.innerHTML] == `Directory`) {
             dir = obj.innerHTML;
