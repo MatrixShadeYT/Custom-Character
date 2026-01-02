@@ -43,6 +43,15 @@ function navigation(obj) {
             navlist();
         } else {
             tag = obj.innerHTML;
+            for (let i=0;i<navi.children.length;i++) {
+                if (navi.children[i].innerHTML == tag) {
+                    navi.children[i].style.backgroundColor = '#5b98d1';
+                    navi.children[i].style.color = '#000000';
+                } else {
+                    navi.children[i].style.backgroundColor = '#2878c3';
+                    navi.children[i].style.color = '#ffffff';
+                }
+            }
             prop.innerHTML = proplist();
         }
     } else {
