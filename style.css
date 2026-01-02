@@ -1,0 +1,54 @@
+html {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #06041a;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (min-aspect-ratio: 3/4) {
+    #navigator::-webkit-scrollbar {display:none;}
+    #navigator, #properties {
+        background-color: #152266;
+        border-radius: 2.5vw;
+        color: white;
+        height: 95vh;
+        width: 22vw;
+        margin: 1vw;
+    }
+    #navigator {
+        overflow-y: scroll;
+        float: left;
+    }
+    #navigator button {
+        border-radius: 1vw;
+        margin-left: 1vw;
+        margin-top: 1vh;
+        font-size: 2.5vw;
+        width: 20vw;
+        height: 10vh;
+    }
+    #display {
+        background-color: #2a366e;
+        border-radius: 2.5vw;
+        position: absolute;
+        height: 95vh;
+        width: 52vw;
+        margin: 0px;
+        top: 1vw;
+    }
+    #properties {
+        text-align: center;
+        font-size: 2.5vw;
+        float: right;
+    }
+    #properties select, #properties input {
+        height: 5vh;
+    }
+}
+@media screen and (max-aspect-ratio: 4/3) {} /* mobile */
