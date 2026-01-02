@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ctx.fillStyle = `#152266`;
         ctx.fillRect(0,0,canvas.width,canvas.height);
         ctx.fillStyle = vals['Basics']['Color'];
-        ctx.fillRect (canvas.width/(vals['Basics']['Number']*2),canvas.height/(vals['Basics']['Slider']*2),canvas.width/vals['Basics']['Number'],canvas.height/vals['Basics']['Slider']);
+        ctx.fillRect(20,20,(canvas.width/100)*vals['Basics']['Number'],(canvas.height/100)*vals['Basics']['Slider']);
     }
     animate();
 })

@@ -13,19 +13,15 @@ const dict = {
             ],
             Slider: [
                 'range',
-                1,
-                3
+                0,
+                100
             ],
             Color: [
                 'color'
             ]
         },
-        Personality: "Directory",
         Clothes: "Directory",
         Body: "Directory"
-    },
-    Personality: {
-        Main: "Directory"
     },
     Clothes: {
         Main: "Directory"

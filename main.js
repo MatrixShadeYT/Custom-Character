@@ -17,9 +17,9 @@ function proplist() {
         } else if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'number') {
             stringy += `<input onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="number" value="${vals[tag][Object.keys(dict[dir][tag])[i]]}" min="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][1]}" max="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][2]}">`;
         } else if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'range') {
-            stringy += `<input onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="range" value="${vals[tag][Object.keys(dict[dir][tag])[i]]}" min="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][1]}" max="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][2]}">`;
+            stringy += `<input oninput="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="range" value="${vals[tag][Object.keys(dict[dir][tag])[i]]}" min="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][1]}" max="${dict[dir][tag][Object.keys(dict[dir][tag])[i]][2]}">`;
         } else if (dict[dir][tag][Object.keys(dict[dir][tag])[i]][0] == 'color') {
-            stringy += `<input onchange="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="color" value="${vals[tag][Object.keys(dict[dir][tag])[i]]}">`;
+            stringy += `<input oninput="updVar(this)" id="${Object.keys(dict[dir][tag])[i]}" name="${Object.keys(dict[dir][tag])[i]}" type="color" value="${vals[tag][Object.keys(dict[dir][tag])[i]]}">`;
         }
     }
     return stringy;
@@ -30,10 +30,7 @@ function navlist() {
         navi.innerHTML += `<button onclick="navigation(this)">${Object.keys(dict[dir])[i]}</button>`;
     }
 }
-function updVar(obj) {
-    console.log(`${obj.id} = ${obj.value}`);
-    vals[tag][obj.id] = obj.value;
-}
+function updVar(obj) {vals[tag][obj.id] = obj.value;}
 function navigation(obj) {
     var prop = document.querySelector(`#properties`);
     var navi = document.querySelector(`#navigator`);
