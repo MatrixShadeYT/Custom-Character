@@ -1,0 +1,33 @@
+{
+    "Basics": {
+        "Gender": "null",
+        "Skin Color": "#ffe7b3"
+    },
+    "Shirt": {
+        "Outer": "null",
+        "Type": "null",
+        "Brand": "null",
+        "Color": "#147500",
+        "Accent": "#955e37"
+    },
+    "Pants": {
+        "Type": "null",
+        "Bands": "null",
+        "Color": "#00319a",
+        "Accent": "#493710"
+    },
+    "Socks": {},
+    "Shoes": {},
+    "Hat": {},
+    "Necklace": {},
+    "Gloves": {},
+    "Bands": {},
+    "Hair": {
+        "Style": "null",
+        "Color": "#321c06"
+    },
+    "Arms": {},
+    "Legs": {},
+    "Hands": {},
+    "Feet": {}
+}
